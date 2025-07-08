@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Adhe</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <style>
+      html, body {
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body class="text-gray-800 font-sans bg-white dark:bg-gray-900 dark:text-gray-100">
+
+<!-- NAVBAR -->
+<header class="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 z-50 shadow">
+  <div class="flex justify-between items-center px-6 py-4">
+    <a href="#home" class="bg-green-500 px-6 py-2 text-sm text-white rounded-lg font-bold">Adhe</a>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-8 font-semibold items-center">
+      <a href="#home" class="hover:text-green-600">Home</a>
+      <a href="#projects" class="hover:text-green-600">Projects</a>
+      <a href="#skills" class="hover:text-green-600">Skills</a>
+      <button id="darkToggle" class="ml-4 text-xl">
+        <i class="ri-moon-line text-gray-700 dark:text-white"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden flex items-center space-x-4">
+      <i id="menu-button" class="ri-menu-line text-2xl cursor-pointer"></i>
+      <button id="darkToggleMobile" class="text-xl">
+        <i class="ri-moon-line text-gray-700 dark:text-white"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu (Vertical list) -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col space-y-4 font-semibold">
+    <a href="#home" class="hover:text-green-600">Home</a>
+    <a href="#projects" class="hover:text-green-600">Projects</a>
+    <a href="#skills" class="hover:text-green-600">Skills</a>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="pt-24 h-screen w-full relative overflow-hidden">
+
+  <!-- Section: HOME -->
+  <section id="home" class="section h-full flex items-center justify-center text-center px-6 md:px-12">
+    <div class="max-w-2xl space-y-6">
+      <p class="text-sm font-semibold text-gray-500 dark:text-gray-300">| IOT & Programming Enthusiast | </p>
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white">Hello, my name is <br /> Syahrur Adhe Pratama Putra</h1>
+      <p class="text-gray-600 dark:text-gray-300">Hello! I’m passionate about IoT and programming. Here you’ll find my projects, ideas, and the journey of combining hardware and software into working innovations.</p>
+      <a href="#projects" class="bg-green-700 text-white px-5 py-2 rounded-md font-semibold hover:bg-green-800 inline-block">View Projects</a>
+    </div>
+  </section>
+
+  <!-- Section: PROJECTS -->
+  <section id="projects" class="section hidden h-full overflow-y-auto bg-white dark:bg-gray-900 py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white">My Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- CARD -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transform transition duration-300 hover:-translate-y-2 p-5 flex flex-col">
+          <img
+            src="/assets/Image/IoT.PNG"
+            alt="IoT Project"
+            class="w-full h-44 object-cover rounded-xl mb-4"
+          />
+          <div class="mb-3">
+            <h3 class="text-lg font-bold text-gray-800 dark:text-white">IOT</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-300">(Personal Projects)</p>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-4 text-justify">
+              Prototipe proyek IoT yang menghubungkan ESP32 dengan aplikasi Android untuk mengontrol lampu secara jarak jauh melalui Firebase Realtime Database secara real-time.
+          </p>
+          <a
+            href="https://github.com/Adhe110/TokoBuku.git"
+            target="_blank"
+            class="mt-auto inline-block text-green-600 font-semibold hover:underline"
+          >
+            View
+          </a>
+        </div>
+
+        <!-- CARD -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transform transition duration-300 hover:-translate-y-2 p-5 flex flex-col">
+          <img
+            src="https://camo.githubusercontent.com/1d3e6910350495f75bbc1a5f96a562e27e6f55d9a0c5f80f866591241b1273ec/68747470733a2f2f692e6962622e636f2f32377276436364322f66393331636236312d326239382d343834322d386633372d3261363366316334396465392e6a7067"
+            alt="Kostify Project"
+            class="w-full h-44 object-cover rounded-xl mb-4"
+          />
+          <div class="mb-3">
+            <h3 class="text-lg font-bold text-gray-800 dark:text-white">KOSTIFY</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-300">(Final Project – Mobile Programming)</p>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-4 text-justify">
+            Aplikasi mobile yang dibangun dengan Android Studio untuk menampilkan daftar kost, menggunakan
+            Firebase Realtime Database dan Firebase Storage untuk mengelola data dan gambar kost secara efisien.
+          </p>
+          <a
+            href="https://github.com/Adhe110/Aplikasi_Mobile_Hostify.git"
+            target="_blank"
+            class="mt-auto inline-block text-green-600 font-semibold hover:underline"
+          >
+            View
+          </a>
+        </div>
+
+        <!-- CARD -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transform transition duration-300 hover:-translate-y-2 p-5 flex flex-col">
+          <img
+            src="assets/Image/C-Book.png"
+            alt="C-Book Project"
+            class="w-full h-44 object-cover rounded-xl mb-4"
+          />
+          <div class="mb-3">
+            <h3 class="text-lg font-bold text-gray-800 dark:text-white">C-Book</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-300">(Final Project – Web Programming)</p>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-4 text-justify">
+           Toko buku online yang dikembangkan menggunakan framework Laravel, dengan fitur-fitur 
+           seperti daftar buku, manajemen kategori, keranjang belanja, dan panel admin.
+          </p>
+          <a
+            href="https://github.com/Adhe110/Aplikasi_Mobile_Hostify.git"
+            target="_blank"
+            class="mt-auto inline-block text-green-600 font-semibold hover:underline"
+          >
+            View
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: SKILLS -->
+  <section id="skills" class="section py-16 bg-white dark:bg-gray-900 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-10">My Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+
+        <!-- Skill Item -->
+        <div class="bg-gray-100 dark:bg-gray-800 p-5 rounded-xl hover:shadow-xl transform transition duration-300 hover:-translate-y-2">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" class="w-12 h-12 mx-auto mb-3">
+          <p class="text-gray-700 dark:text-white font-medium">HTML</p>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-800 p-5 rounded-xl hover:shadow-xl transform transition duration-300 hover:-translate-y-2">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" class="w-12 h-12 mx-auto mb-3">
+          <p class="text-gray-700 dark:text-white font-medium">CSS</p>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-800 p-5 rounded-xl hover:shadow-xl transform transition duration-300 hover:-translate-y-2">
+          <img src="assets/Image/internet-of-things.png" alt="JavaScript" class="w-12 h-12 mx-auto mb-3">
+          <p class="text-gray-700 dark:text-white font-medium">IOT</p>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-800 p-5 rounded-xl hover:shadow-xl transform transition duration-300 hover:-translate-y-2">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" alt="PHP" class="w-12 h-12 mx-auto mb-3">
+          <p class="text-gray-700 dark:text-white font-medium">PHP</p>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-800 p-5 rounded-xl hover:shadow-xl transform transition duration-300 hover:-translate-y-2">
+          <img src="https://img.icons8.com/?size=100&id=hYoELNwniGhi&format=png&color=000000" alt="MySQL" class="w-12 h-12 mx-auto mb-3">
+          <p class="text-gray-700 dark:text-white font-medium">MySQL</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="assets/js/script.js"></script>
+<script>
+  const darkToggles = [document.getElementById("darkToggle"), document.getElementById("darkToggleMobile")];
+  const html = document.documentElement;
+
+  if (localStorage.getItem("theme") === "dark") {
+    html.classList.add("dark");
+  }
+
+  darkToggles.forEach(btn => {
+    btn?.addEventListener("click", () => {
+      html.classList.toggle("dark");
+      localStorage.setItem("theme", html.classList.contains("dark") ? "dark" : "light");
+    });
+  });
+</script>
+</body>
+</html>
